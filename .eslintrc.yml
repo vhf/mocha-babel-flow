@@ -1,5 +1,7 @@
 # enable ES6
 parser: babel-eslint
+parserOptions:
+  ecmaVersion: 6
 
 # register plugins
 plugins:
