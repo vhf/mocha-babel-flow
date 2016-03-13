@@ -1,0 +1,29 @@
+# enable ES6
+parser: babel-eslint
+
+# register plugins
+plugins:
+  - flowtype
+  - flow-vars
+
+# use the rules of eslint-config-airbnb
+extends:
+  - airbnb/base
+
+# register environments
+env:
+  browser: true
+  node: true
+
+rules:
+  max-len: [2, 150, 2, {ignoreUrls: true, ignoreComments: false}]
+
+  # eslint-plugin-flowtype
+  flowtype/require-parameter-type: 1
+  flowtype/require-return-type: [1, always, annotateUndefined: never]
+  flowtype/space-after-type-colon: [1, always]
+  flowtype/space-before-type-colon: [1, never]
+
+  # eslint-plugin-flow-vars
+  flow-vars/define-flow-type: 1
+  flow-vars/use-flow-type: 1
